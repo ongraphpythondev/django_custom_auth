@@ -28,7 +28,7 @@ sensitive_post_parameters_m = method_decorator(
 )
 
 
-class CustomUserRegistrationView(generics.ListCreateAPIView):
+class CustomUserRegistrationView(generics.CreateAPIView):
     """
     Custom User Registration View.
     """
