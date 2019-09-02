@@ -6,7 +6,7 @@ from rest_framework import generics
 from rest_framework.permissions import AllowAny
 from rest_framework import status
 from rest_framework.response import Response
-from rest_auth.views import LoginView
+from rest_auth.views import LoginView, LogoutView
 from rest_framework.authtoken.models import Token
 from rest_framework.generics import UpdateAPIView
 from django.views.decorators.debug import sensitive_post_parameters
@@ -81,7 +81,7 @@ class CustomLoginView(LoginView):
             )
 
 
-class CustomLogoutView(generics.CreateAPIView):
+class CustomLogoutView(LogoutView):
     """
     Custom Logout View.
     """
